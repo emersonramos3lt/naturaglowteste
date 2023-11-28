@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    margin: 0px;
+}
+
+header {
+    background-color: transparent;
+    margin: 0;
+    color: #48E5C2;
+    padding: 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+header h1 {
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 19px;
+    color: #48E5C2;
+    position: relative;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #c4cbca;
+}
+
+nav a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #c4cbca;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: transform 0.4s ease-in-out;
+    z-index: 1;
+}
+
+nav a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+main {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 320px;
+    max-width: 800px;
+    margin: auto;
+}
+
+main h1, h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    color: #99a3a2;
+}
+
+main p {
+    font-family: 'Roboto', sans-serif;
+    line-height: 30px;
+}
+
+main ul li {
+    line-height: 30px;
+    font-family: 'Roboto', sans-serif;
+}
+
+span {
+    font-weight: bold;
+    color: #99a3a2;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-carrinho {
+    background-color: white;
+    color: #99a3a2;
+    padding: 15px 30px;
+    border-radius: 1px solid #b3b8b7;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    transition: 1s;
+}
+
+.add-carrinho:hover {
+    background-color: #b3b8b7;
+    color: white;
+}
+
+@media (max-width: 700px) {
+    header h1 {
+        font-size: 30px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    li {
+        margin: 5px 0px;
+    }
+
+    main h1, h2 {
+        color: #D2B48C;
+    }
+
+    span {
+        color: #D2B48C;
+    }
+
+    .add-carrinho {
+        color: #D2B48C;
+    }
+
+    .add-carrinho:hover {
+        background-color: #D2B48C;
+    }
+
+}
+
+
+
+
